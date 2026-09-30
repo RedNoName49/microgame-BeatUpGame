@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://b1jeof0vr8ynm"]
+
+[ext_resource type="PackedScene" uid="uid://mm4eqqmlknp5" path="res://BeatUpGame/Guy/Scenes/guy.tscn" id="1_urvjm"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d0siw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d0siw"]
+
+[node name="Room" type="Node2D" unique_id=234804194]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1667736665]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2062523068]
+physics_material_override = SubResource("PhysicsMaterial_d0siw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1273593945]
+shape = SubResource("WorldBoundaryShape2D_d0siw")
+
+[node name="Guy" parent="." unique_id=1721708422 instance=ExtResource("1_urvjm")]
+position = Vector2(0, -91)

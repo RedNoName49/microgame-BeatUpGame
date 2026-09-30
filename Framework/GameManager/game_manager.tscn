@@ -36,6 +36,7 @@ process_mode = 3
 script = ExtResource("1_avyrk")
 
 [node name="BigAssBlackRectangle" type="ColorRect" parent="." unique_id=1104671842]
+visible = false
 modulate = Color(1, 1, 1, 0)
 z_index = 8
 anchors_preset = -1
@@ -81,6 +82,7 @@ unique_name_in_owner = true
 visible = false
 
 [node name="Background" type="ColorRect" parent="." unique_id=1445678169]
+visible = false
 z_index = -4096
 anchors_preset = 15
 anchor_right = 1.0
@@ -91,3 +93,4 @@ mouse_filter = 2
 color = Color(0.06879827, 0.06879828, 0.06879828, 1)
 
 [node name="MousePaw" parent="." unique_id=469138353 instance=ExtResource("9_rkw5e")]
+visible = false

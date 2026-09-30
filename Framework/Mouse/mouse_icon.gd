@@ -4,7 +4,7 @@ class_name PawMouseIcon extends Node2D
 
 
 func _ready() -> void:
-	make_visible()
+	# make_visible()
 	animation_player.play("Shmove")
 	z_index = RenderingServer.CANVAS_ITEM_Z_MAX
 
@@ -15,11 +15,11 @@ func _input(event: InputEvent) -> void:
 		
 
 
-func make_visible() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
-	show()
+# func make_visible() -> void:
+	# Input.mouse_mode = Input.MOUSE_MODE_HIDDEN
+	 # show()
 
 
-func make_invisible() -> void:
-	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
-	hide()
+# func make_invisible() -> void:
+	# Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+	# hide()

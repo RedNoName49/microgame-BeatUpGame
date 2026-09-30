@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://mm4eqqmlknp5"]
+
+[ext_resource type="Texture2D" uid="uid://bbtxeiausip2f" path="res://BeatUpGame/Guy/Assets/basketball.png" id="1_8udaw"]
+[ext_resource type="Script" uid="uid://ciyeatvcm6pgh" path="res://BeatUpGame/Guy/Scripts/guy_collison.gd" id="1_d5gx8"]
+[ext_resource type="Script" uid="uid://dxuwbgfjli174" path="res://BeatUpGame/Guy/Scripts/health.gd" id="3_d5gx8"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_d0siw"]
+radius = 31.016125
+
+[node name="Guy" type="Node2D" unique_id=1721708422]
+
+[node name="RigidBody2D" type="RigidBody2D" parent="." unique_id=1438487035]
+max_contacts_reported = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="RigidBody2D" unique_id=563842890]
+scale = Vector2(0.008, 0.008)
+texture = ExtResource("1_8udaw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=826289721]
+shape = SubResource("CircleShape2D_d0siw")
+
+[node name="Area2D" type="Area2D" parent="RigidBody2D" unique_id=240758074]
+script = ExtResource("1_d5gx8")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="RigidBody2D/Area2D" unique_id=797534453]
+shape = SubResource("CircleShape2D_d0siw")
+
+[node name="Health" type="Node2D" parent="." unique_id=1069977696]
+script = ExtResource("3_d5gx8")
