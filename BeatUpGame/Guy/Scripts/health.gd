@@ -1,11 +1,17 @@
 extends Node2D
 
-var Health: int = 100
+var healthPoints: int = 100
+
+func takeDamage(damage: int) -> void:
+	if healthPoints <= 0:
+		healthPoints = 0
+		die()
+		return
+	healthPoints -= damage
 
 func die() -> void:
-	if Health == 0:
-		GameManager.win()
-	
+	GameManager.win()
+	print("you win")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

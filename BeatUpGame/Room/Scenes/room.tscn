@@ -1,20 +1,117 @@
 [gd_scene format=3 uid="uid://b1jeof0vr8ynm"]
 
-[ext_resource type="PackedScene" uid="uid://mm4eqqmlknp5" path="res://BeatUpGame/Guy/Scenes/guy.tscn" id="1_urvjm"]
+[ext_resource type="Script" uid="uid://bn850c2fh2wa" path="res://BeatUpGame/Weapons/Scripts/weapon.gd" id="1_6gu0x"]
+[ext_resource type="Texture2D" uid="uid://bxalk4330h4vc" path="res://BeatUpGame/Weapons/Assets/baseball bat.png" id="2_xp67x"]
+[ext_resource type="Texture2D" uid="uid://bbtxeiausip2f" path="res://BeatUpGame/Guy/Assets/basketball.png" id="3_2drv3"]
+[ext_resource type="Script" uid="uid://dxuwbgfjli174" path="res://BeatUpGame/Guy/Scripts/health.gd" id="5_2gvbo"]
+[ext_resource type="Script" uid="uid://det4gd4xu4ntg" path="res://BeatUpGame/Weapons/Scripts/handle.gd" id="5_6gu0x"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d0siw"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_d0siw"]
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_gh0et"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_8h8ym"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_ts7q4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_f46uj"]
+radius = 31.016125
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d0siw"]
+size = Vector2(20.216503, 25.707191)
+
 [node name="Room" type="Node2D" unique_id=234804194]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1667736665]
+position = Vector2(0, -286)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2062523068]
+[node name="Walls" type="StaticBody2D" parent="." unique_id=2062523068]
 physics_material_override = SubResource("PhysicsMaterial_d0siw")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1273593945]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls" unique_id=1273593945]
 shape = SubResource("WorldBoundaryShape2D_d0siw")
 
-[node name="Guy" parent="." unique_id=1721708422 instance=ExtResource("1_urvjm")]
-position = Vector2(0, -91)
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Walls" unique_id=2124077502]
+position = Vector2(538, -305)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_gh0et")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Walls" unique_id=689215190]
+position = Vector2(-538, -305)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_8h8ym")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Walls" unique_id=230350922]
+position = Vector2(0, -570)
+rotation = 3.1415927
+shape = SubResource("WorldBoundaryShape2D_ts7q4")
+
+[node name="Guy" type="RigidBody2D" parent="." unique_id=442364524]
+position = Vector2(0, -127)
+max_contacts_reported = 1
+angular_velocity = 17.453293
+
+[node name="Sprite2D" type="Sprite2D" parent="Guy" unique_id=1431441574]
+scale = Vector2(0.007772427, 0.011607298)
+texture = ExtResource("3_2drv3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Guy" unique_id=1925202760]
+scale = Vector2(0.97155344, 1.450912)
+shape = SubResource("CircleShape2D_f46uj")
+
+[node name="Area2D" type="Area2D" parent="Guy" unique_id=1418476615]
+scale = Vector2(0.5522289, 0.80759794)
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Guy/Area2D" unique_id=616738873]
+scale = Vector2(1.7593309, 1.7965772)
+shape = SubResource("CircleShape2D_f46uj")
+
+[node name="Health" type="Node2D" parent="Guy" unique_id=1497414374]
+script = ExtResource("5_2gvbo")
+
+[node name="Bat" type="Node2D" parent="." unique_id=496587692]
+
+[node name="Baseball Bat" type="RigidBody2D" parent="Bat" unique_id=134283960]
+gravity_scale = 0.0
+angular_damp = 3.0
+script = ExtResource("1_6gu0x")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bat/Baseball Bat" unique_id=310681112]
+position = Vector2(30.572887, -28.64147)
+scale = Vector2(0.22785574, 0.23094916)
+texture = ExtResource("2_xp67x")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bat/Baseball Bat" unique_id=1205168359]
+position = Vector2(30.572887, -28.64147)
+scale = Vector2(0.22785574, 0.23094916)
+polygon = PackedVector2Array(130, -153.1, 130, -149.3, 50.899994, -76, 48.699997, -76, -35, 14.800003, -35, 15.600006, -146.2, 115, -155.5, 115, -160.5, 122, -163.5, 122, -162, 131.5, -162, 134.20001, -149, 147.20001, -149, 150, -131.8, 150, -128, 137.4, -128, 136.20001, -85, 97.29999, -85, 96.399994, 1, 21.399994, 1, 20.399994, 65, -28, 67.2, -28, 150.1, -105, 152.29999, -105, 163, -116.8, 163, -129.1, 149, -145.2, 149, -147.2)
+
+[node name="Area2D" type="Area2D" parent="Bat/Baseball Bat" unique_id=1953561091]
+collision_layer = 2
+collision_mask = 2
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Bat/Baseball Bat/Area2D" unique_id=947682674]
+position = Vector2(30.572887, -28.64147)
+scale = Vector2(0.22785574, 0.23094916)
+polygon = PackedVector2Array(130, -153.1, 130, -149.3, 50.899994, -76, 48.699997, -76, -35, 14.800003, -35, 15.600006, -13.1662245, 34.639656, -13.1662245, 34.639656, 65, -28, 67.2, -28, 150.1, -105, 152.29999, -105, 163, -116.8, 163, -129.1, 149, -145.2, 149, -147.2)
+
+[node name="Marker2D" type="Marker2D" parent="Bat/Baseball Bat" unique_id=1907959251]
+position = Vector2(30.57289, -28.641472)
+
+[node name="Handle" type="AnimatableBody2D" parent="Bat" unique_id=251848010]
+script = ExtResource("5_6gu0x")
+
+[node name="PinJoint2D" type="PinJoint2D" parent="Bat/Handle" unique_id=446548002]
+position = Vector2(-2, 2)
+node_a = NodePath("..")
+node_b = NodePath("../../Baseball Bat")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bat/Handle" unique_id=146030865]
+position = Vector2(10.904958, -10.105082)
+rotation = 0.83551323
+scale = Vector2(0.29364258, 1.543924)
+shape = SubResource("RectangleShape2D_d0siw")

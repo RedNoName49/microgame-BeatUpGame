@@ -93,4 +93,3 @@ mouse_filter = 2
 color = Color(0.06879827, 0.06879828, 0.06879828, 1)
 
 [node name="MousePaw" parent="." unique_id=469138353 instance=ExtResource("9_rkw5e")]
-visible = false
