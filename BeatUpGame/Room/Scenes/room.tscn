@@ -10,6 +10,7 @@
 [ext_resource type="Script" uid="uid://c0xoq7okv2p33" path="res://BeatUpGame/Weapons/Scripts/mace.gd" id="7_2gvbo"]
 [ext_resource type="Script" uid="uid://ccov5qmc5nikc" path="res://BeatUpGame/Weapons/Scripts/hammer.gd" id="8_1w2ce"]
 [ext_resource type="Texture2D" uid="uid://pfnhxm0ekssi" path="res://BeatUpGame/Weapons/Assets/hammer.webp" id="10_f46uj"]
+[ext_resource type="Script" uid="uid://bfu16jt42w26m" path="res://BeatUpGame/Room/Scripts/timer.gd" id="11_2r8oc"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d0siw"]
 
@@ -26,6 +27,13 @@ radius = 31.016125
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_d0siw"]
 size = Vector2(20.216503, 25.707191)
+
+[sub_resource type="SystemFont" id="SystemFont_scn4i"]
+font_names = PackedStringArray("Chiller")
+
+[sub_resource type="LabelSettings" id="LabelSettings_pt1fr"]
+font = SubResource("SystemFont_scn4i")
+font_size = 72
 
 [node name="Room" type="Node2D" unique_id=234804194]
 
@@ -215,3 +223,13 @@ position = Vector2(10.904958, -10.105082)
 rotation = 0.83551323
 scale = Vector2(0.29364258, 1.543924)
 shape = SubResource("RectangleShape2D_d0siw")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=983208060]
+script = ExtResource("11_2r8oc")
+
+[node name="Label" type="Label" parent="Node2D" unique_id=1986230440]
+offset_left = 490.0
+offset_top = -45.0
+offset_right = 530.0
+offset_bottom = -22.0
+label_settings = SubResource("LabelSettings_pt1fr")
