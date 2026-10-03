@@ -2,9 +2,9 @@ extends RigidBody2D
 @export var minimumDamageSpeed: float = 900.0
 @export var damage: int
 
-@onready var guy = $"../../Guy/Area2D"
+@onready var guy = $"../../Vamp/Guy/Area2D"
 @onready var hitbox: Area2D = $Area2D
-@onready var health = $"../../Guy/Health"
+@onready var health = $"../../Vamp/Guy/Health"
 @onready var tip = $Marker2D
 @onready var diffi = GameManager.difficulty_manager.current_difficulty
 
