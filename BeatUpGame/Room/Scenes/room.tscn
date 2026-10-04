@@ -1,20 +1,34 @@
 [gd_scene format=3 uid="uid://b1jeof0vr8ynm"]
 
-[ext_resource type="Texture2D" uid="uid://iol1ftd5qjpe" path="res://BeatUpGame/Guy/Assets/Vamp PlaceHolder.png" id="1_2r8oc"]
 [ext_resource type="Script" uid="uid://bn850c2fh2wa" path="res://BeatUpGame/Weapons/Scripts/weapon.gd" id="1_6gu0x"]
 [ext_resource type="Texture2D" uid="uid://g1e0uomr32il" path="res://BeatUpGame/Guy/Assets/Tooth.PNG" id="1_cf105"]
 [ext_resource type="Texture2D" uid="uid://blh3mmv2bh0bu" path="res://BeatUpGame/Room/Assets/DarkRoom.PNG" id="1_nn5u5"]
-[ext_resource type="Texture2D" uid="uid://bxalk4330h4vc" path="res://BeatUpGame/Weapons/Assets/baseball bat.png" id="2_xp67x"]
+[ext_resource type="Script" uid="uid://ctkw8ie17fmuh" path="res://BeatUpGame/Room/Scenes/difficulty_mod.gd" id="2_6mb5k"]
 [ext_resource type="Script" uid="uid://b53uyhrstb3cr" path="res://BeatUpGame/Guy/Scripts/GuySprite.gd" id="3_3vw2c"]
 [ext_resource type="AudioStream" uid="uid://uwufi5rlpvlg" path="res://BeatUpGame/Guy/Assets/Untitled.mp3" id="3_o8m2w"]
 [ext_resource type="Script" uid="uid://dkyhfh0fodmvy" path="res://BeatUpGame/Weapons/Scripts/bat.gd" id="3_xp67x"]
 [ext_resource type="Script" uid="uid://dxuwbgfjli174" path="res://BeatUpGame/Guy/Scripts/health.gd" id="5_2gvbo"]
 [ext_resource type="Script" uid="uid://det4gd4xu4ntg" path="res://BeatUpGame/Weapons/Scripts/handle.gd" id="5_6gu0x"]
-[ext_resource type="Texture2D" uid="uid://dy2pusu4gy05a" path="res://BeatUpGame/Weapons/Assets/Mace.png" id="7_2drv3"]
+[ext_resource type="Texture2D" uid="uid://bosm38e3olf37" path="res://BeatUpGame/Guy/Assets/IMG_0086.PNG" id="5_dt8p7"]
+[ext_resource type="Texture2D" uid="uid://c0i6fnk01fcf0" path="res://BeatUpGame/Guy/Assets/IMG_0087.PNG" id="6_6mb5k"]
 [ext_resource type="Script" uid="uid://c0xoq7okv2p33" path="res://BeatUpGame/Weapons/Scripts/mace.gd" id="7_2gvbo"]
+[ext_resource type="Texture2D" uid="uid://j6g8w5syxip5" path="res://BeatUpGame/Guy/Assets/IMG_0072.PNG" id="7_y0ml6"]
 [ext_resource type="Script" uid="uid://ccov5qmc5nikc" path="res://BeatUpGame/Weapons/Scripts/hammer.gd" id="8_1w2ce"]
-[ext_resource type="Texture2D" uid="uid://pfnhxm0ekssi" path="res://BeatUpGame/Weapons/Assets/hammer.webp" id="10_f46uj"]
+[ext_resource type="Texture2D" uid="uid://bnr2wuk03yolt" path="res://BeatUpGame/Guy/Assets/IMG_0073.PNG" id="8_dfpx6"]
+[ext_resource type="Texture2D" uid="uid://c8v6kyxjuyywf" path="res://BeatUpGame/Weapons/Assets/IMG_0100.PNG" id="9_nn5u5"]
+[ext_resource type="Texture2D" uid="uid://dd61lfigsemto" path="res://BeatUpGame/Guy/Assets/IMG_0075.PNG" id="9_wxsb0"]
+[ext_resource type="Texture2D" uid="uid://bqpqh752lrqqw" path="res://BeatUpGame/Guy/Assets/IMG_0077.PNG" id="10_1l5i2"]
 [ext_resource type="Script" uid="uid://bfu16jt42w26m" path="res://BeatUpGame/Room/Scripts/timer.gd" id="11_2r8oc"]
+[ext_resource type="Texture2D" uid="uid://dc5e66olq45eo" path="res://BeatUpGame/Guy/Assets/IMG_0081.PNG" id="11_jhb7f"]
+[ext_resource type="Texture2D" uid="uid://bxb8q0hlfb87s" path="res://BeatUpGame/Weapons/Assets/IMG_0101.PNG" id="12_avhjr"]
+[ext_resource type="Texture2D" uid="uid://biksmj2ljp0d5" path="res://BeatUpGame/Guy/Assets/IMG_0083.PNG" id="12_sadvc"]
+[ext_resource type="Texture2D" uid="uid://b8t8xwitrmrck" path="res://BeatUpGame/Guy/Assets/IMG_0085.PNG" id="13_8e4mk"]
+[ext_resource type="Texture2D" uid="uid://erjrkyg47l3a" path="res://BeatUpGame/Weapons/Assets/IMG_0102.PNG" id="14_nn5u5"]
+[ext_resource type="Texture2D" uid="uid://7vg41yrfwbl3" path="res://BeatUpGame/Guy/Assets/IMG_0078.PNG" id="14_sokdu"]
+[ext_resource type="Texture2D" uid="uid://drws7jv56vcb7" path="res://BeatUpGame/Guy/Assets/IMG_0079.PNG" id="15_5q26w"]
+[ext_resource type="Texture2D" uid="uid://bfgis064ebcvt" path="res://BeatUpGame/Guy/Assets/IMG_0080.PNG" id="16_cjdc2"]
+[ext_resource type="Texture2D" uid="uid://d2jxbhme65bam" path="res://BeatUpGame/Guy/Assets/IMG_0082.PNG" id="17_fcu8w"]
+[ext_resource type="Texture2D" uid="uid://buxkwhmad8cv0" path="res://BeatUpGame/Guy/Assets/IMG_0074.PNG" id="18_4wuh4"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d0siw"]
 
@@ -33,17 +47,121 @@ bounce = 0.41
 radius = 31.016125
 
 [sub_resource type="Curve" id="Curve_gh0et"]
-_data = [Vector2(0.9533899, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
+_data = [Vector2(0.7542373, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gh0et"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_2r8oc")
+"texture": ExtResource("5_dt8p7")
+}],
+"loop": 1,
+"name": &"badlyinjured",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_6mb5k")
+}],
+"loop": 1,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_y0ml6")
 }],
 "loop": 1,
 "name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_dfpx6")
+}],
+"loop": 1,
+"name": &"healthy",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_wxsb0")
+}],
+"loop": 1,
+"name": &"hurt1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_1l5i2")
+}],
+"loop": 1,
+"name": &"hurt2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_jhb7f")
+}],
+"loop": 1,
+"name": &"hurt3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_sadvc")
+}],
+"loop": 1,
+"name": &"hurt4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_8e4mk")
+}],
+"loop": 1,
+"name": &"hurt5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_sokdu")
+}],
+"loop": 1,
+"name": &"hurt6",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_5q26w")
+}],
+"loop": 1,
+"name": &"hurt7",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_cjdc2")
+}],
+"loop": 1,
+"name": &"hurt8",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_fcu8w")
+}],
+"loop": 1,
+"name": &"hurt9",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("18_4wuh4")
+}],
+"loop": 1,
+"name": &"injured",
 "speed": 5.0
 }]
 
@@ -96,7 +214,7 @@ position = Vector2(1, 57)
 position = Vector2(0, -127)
 physics_material_override = SubResource("PhysicsMaterial_avhjr")
 max_contacts_reported = 1
-angular_velocity = 17.453293
+script = ExtResource("2_6mb5k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Vamp/Guy" unique_id=1925202760]
 scale = Vector2(1.6654049, 1.7291125)
@@ -113,6 +231,7 @@ shape = SubResource("CircleShape2D_f46uj")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="Vamp/Guy/Area2D" unique_id=1161429908]
 emitting = false
+amount = 15
 texture = ExtResource("1_cf105")
 one_shot = true
 speed_scale = 5.07
@@ -133,9 +252,9 @@ script = ExtResource("5_2gvbo")
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Vamp/Guy" unique_id=91374249]
 stream = ExtResource("3_o8m2w")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Vamp" unique_id=1865841157]
-position = Vector2(0, -131)
-scale = Vector2(0.5282275, 0.4098049)
+[node name="GuySprite" type="AnimatedSprite2D" parent="Vamp" unique_id=1865841157]
+position = Vector2(7, -137)
+scale = Vector2(0.2702709, 0.24282908)
 sprite_frames = SubResource("SpriteFrames_gh0et")
 script = ExtResource("3_3vw2c")
 
@@ -150,8 +269,8 @@ script = ExtResource("1_6gu0x")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bat/Baseball Bat" unique_id=310681112]
 position = Vector2(30.572887, -28.64147)
-scale = Vector2(0.22785574, 0.23094916)
-texture = ExtResource("2_xp67x")
+scale = Vector2(0.24850501, 0.24833107)
+texture = ExtResource("9_nn5u5")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Bat/Baseball Bat" unique_id=1205168359]
 position = Vector2(30.572887, -28.64147)
@@ -196,8 +315,8 @@ script = ExtResource("1_6gu0x")
 [node name="Sprite2D" type="Sprite2D" parent="Mace/Baseball Bat" unique_id=191890746]
 position = Vector2(30.572887, -28.64147)
 rotation = 0.2050105
-scale = Vector2(0.22785574, 0.23094916)
-texture = ExtResource("7_2drv3")
+scale = Vector2(0.26664352, 0.2696711)
+texture = ExtResource("12_avhjr")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Mace/Baseball Bat" unique_id=2104322193]
 position = Vector2(30.572887, -28.64147)
@@ -248,8 +367,8 @@ polygon = PackedVector2Array(24, -177.1, -33, -117, -40, -88.600006, 17.100006, 
 [node name="Sprite2D" type="Sprite2D" parent="Hammer/Baseball Bat" unique_id=10484220]
 position = Vector2(30.572887, -28.64147)
 rotation = 0.13853286
-scale = Vector2(0.22785574, 0.23094916)
-texture = ExtResource("10_f46uj")
+scale = Vector2(0.24039847, 0.2345708)
+texture = ExtResource("14_nn5u5")
 
 [node name="Area2D" type="Area2D" parent="Hammer/Baseball Bat" unique_id=22410583]
 collision_layer = 2
