@@ -91,12 +91,10 @@ _data = {
 }
 
 [node name="MousePaw" type="Node2D" unique_id=469138353]
-visible = false
 z_index = 4096
 script = ExtResource("1_4pd21")
 
 [node name="PawSprite" type="Sprite2D" parent="." unique_id=356713885]
-visible = false
 texture_filter = 1
 position = Vector2(31.999998, 24)
 scale = Vector2(0.83, 0.83)

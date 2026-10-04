@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://bn850c2fh2wa" path="res://BeatUpGame/Weapons/Scripts/weapon.gd" id="1_6gu0x"]
 [ext_resource type="Texture2D" uid="uid://g1e0uomr32il" path="res://BeatUpGame/Guy/Assets/Tooth.PNG" id="1_cf105"]
 [ext_resource type="Texture2D" uid="uid://blh3mmv2bh0bu" path="res://BeatUpGame/Room/Assets/DarkRoom.PNG" id="1_nn5u5"]
-[ext_resource type="Script" uid="uid://ctkw8ie17fmuh" path="res://BeatUpGame/Room/Scenes/difficulty_mod.gd" id="2_6mb5k"]
+[ext_resource type="Script" uid="uid://ctkw8ie17fmuh" path="res://BeatUpGame/Room/Scripts/difficulty_mod.gd" id="2_6mb5k"]
 [ext_resource type="Script" uid="uid://b53uyhrstb3cr" path="res://BeatUpGame/Guy/Scripts/GuySprite.gd" id="3_3vw2c"]
 [ext_resource type="AudioStream" uid="uid://uwufi5rlpvlg" path="res://BeatUpGame/Guy/Assets/Untitled.mp3" id="3_o8m2w"]
 [ext_resource type="Script" uid="uid://dkyhfh0fodmvy" path="res://BeatUpGame/Weapons/Scripts/bat.gd" id="3_xp67x"]
@@ -11,16 +11,23 @@
 [ext_resource type="Script" uid="uid://det4gd4xu4ntg" path="res://BeatUpGame/Weapons/Scripts/handle.gd" id="5_6gu0x"]
 [ext_resource type="Texture2D" uid="uid://bosm38e3olf37" path="res://BeatUpGame/Guy/Assets/IMG_0086.PNG" id="5_dt8p7"]
 [ext_resource type="Texture2D" uid="uid://c0i6fnk01fcf0" path="res://BeatUpGame/Guy/Assets/IMG_0087.PNG" id="6_6mb5k"]
+[ext_resource type="AudioStream" uid="uid://hcrh0n4hy18a" path="res://BeatUpGame/Guy/Assets/pain1.mp3" id="6_sokdu"]
 [ext_resource type="Script" uid="uid://c0xoq7okv2p33" path="res://BeatUpGame/Weapons/Scripts/mace.gd" id="7_2gvbo"]
+[ext_resource type="AudioStream" uid="uid://x7upj7wah3eo" path="res://BeatUpGame/Guy/Assets/pain2.mp3" id="7_5q26w"]
 [ext_resource type="Texture2D" uid="uid://j6g8w5syxip5" path="res://BeatUpGame/Guy/Assets/IMG_0072.PNG" id="7_y0ml6"]
 [ext_resource type="Script" uid="uid://ccov5qmc5nikc" path="res://BeatUpGame/Weapons/Scripts/hammer.gd" id="8_1w2ce"]
+[ext_resource type="AudioStream" uid="uid://bwgrs0wq87c3j" path="res://BeatUpGame/Guy/Assets/pain3.mp3" id="8_cjdc2"]
 [ext_resource type="Texture2D" uid="uid://bnr2wuk03yolt" path="res://BeatUpGame/Guy/Assets/IMG_0073.PNG" id="8_dfpx6"]
+[ext_resource type="AudioStream" uid="uid://bdy2b2aktixag" path="res://BeatUpGame/Guy/Assets/pain4.mp3" id="9_fcu8w"]
 [ext_resource type="Texture2D" uid="uid://c8v6kyxjuyywf" path="res://BeatUpGame/Weapons/Assets/IMG_0100.PNG" id="9_nn5u5"]
 [ext_resource type="Texture2D" uid="uid://dd61lfigsemto" path="res://BeatUpGame/Guy/Assets/IMG_0075.PNG" id="9_wxsb0"]
 [ext_resource type="Texture2D" uid="uid://bqpqh752lrqqw" path="res://BeatUpGame/Guy/Assets/IMG_0077.PNG" id="10_1l5i2"]
+[ext_resource type="AudioStream" uid="uid://ddpabs1l0twg4" path="res://BeatUpGame/Guy/Assets/pain5.mp3" id="10_4wuh4"]
 [ext_resource type="Script" uid="uid://bfu16jt42w26m" path="res://BeatUpGame/Room/Scripts/timer.gd" id="11_2r8oc"]
+[ext_resource type="AudioStream" uid="uid://dxdqp5t66cp3w" path="res://BeatUpGame/Guy/Assets/pain6.mp3" id="11_d58el"]
 [ext_resource type="Texture2D" uid="uid://dc5e66olq45eo" path="res://BeatUpGame/Guy/Assets/IMG_0081.PNG" id="11_jhb7f"]
 [ext_resource type="Texture2D" uid="uid://bxb8q0hlfb87s" path="res://BeatUpGame/Weapons/Assets/IMG_0101.PNG" id="12_avhjr"]
+[ext_resource type="AudioStream" uid="uid://bcpqq7s4meq48" path="res://BeatUpGame/Guy/Assets/death.mp3" id="12_bn160"]
 [ext_resource type="Texture2D" uid="uid://biksmj2ljp0d5" path="res://BeatUpGame/Guy/Assets/IMG_0083.PNG" id="12_sadvc"]
 [ext_resource type="Texture2D" uid="uid://b8t8xwitrmrck" path="res://BeatUpGame/Guy/Assets/IMG_0085.PNG" id="13_8e4mk"]
 [ext_resource type="Texture2D" uid="uid://erjrkyg47l3a" path="res://BeatUpGame/Weapons/Assets/IMG_0102.PNG" id="14_nn5u5"]
@@ -29,6 +36,10 @@
 [ext_resource type="Texture2D" uid="uid://bfgis064ebcvt" path="res://BeatUpGame/Guy/Assets/IMG_0080.PNG" id="16_cjdc2"]
 [ext_resource type="Texture2D" uid="uid://d2jxbhme65bam" path="res://BeatUpGame/Guy/Assets/IMG_0082.PNG" id="17_fcu8w"]
 [ext_resource type="Texture2D" uid="uid://buxkwhmad8cv0" path="res://BeatUpGame/Guy/Assets/IMG_0074.PNG" id="18_4wuh4"]
+[ext_resource type="AudioStream" uid="uid://ci2q07j0r0n8d" path="res://BeatUpGame/Room/Assets/crowd_small_chil_ec049202_9klCwI6.mp3" id="30_y0ml6"]
+[ext_resource type="AudioStream" uid="uid://suhf1lijq1pl" path="res://BeatUpGame/Room/Assets/AAAW.mp3" id="37_fcu8w"]
+[ext_resource type="AudioStream" uid="uid://bsvipf2mqmlq2" path="res://BeatUpGame/Room/Assets/SpookyMusic.mp3" id="38_cjdc2"]
+[ext_resource type="Script" uid="uid://c2jdqjxk8feop" path="res://BeatUpGame/Room/Scripts/music.gd" id="39_fcu8w"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_d0siw"]
 
@@ -49,6 +60,15 @@ radius = 31.016125
 [sub_resource type="Curve" id="Curve_gh0et"]
 _data = [Vector2(0.7542373, 1), 0.0, 0.0, 0, 0, Vector2(1, 0), 0.0, 0.0, 0, 0]
 point_count = 2
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_y1ge0"]
+streams_count = 6
+stream_0/stream = ExtResource("6_sokdu")
+stream_1/stream = ExtResource("7_5q26w")
+stream_2/stream = ExtResource("8_cjdc2")
+stream_3/stream = ExtResource("9_fcu8w")
+stream_4/stream = ExtResource("10_4wuh4")
+stream_5/stream = ExtResource("11_d58el")
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_gh0et"]
 animations = [{
@@ -208,7 +228,7 @@ rotation = 3.1415927
 shape = SubResource("WorldBoundaryShape2D_ts7q4")
 
 [node name="Vamp" type="Node2D" parent="." unique_id=1031704579]
-position = Vector2(1, 57)
+position = Vector2(-1, 74)
 
 [node name="Guy" type="RigidBody2D" parent="Vamp" unique_id=442364524]
 position = Vector2(0, -127)
@@ -238,7 +258,7 @@ speed_scale = 5.07
 explosiveness = 1.0
 direction = Vector2(1, 1)
 spread = 180.0
-gravity = Vector2(0, 0)
+gravity = Vector2(0, 100)
 initial_velocity_min = 99.21
 initial_velocity_max = 214.29
 angle_max = 622.9
@@ -251,6 +271,14 @@ script = ExtResource("5_2gvbo")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Vamp/Guy" unique_id=91374249]
 stream = ExtResource("3_o8m2w")
+volume_db = 6.209
+
+[node name="Pain" type="AudioStreamPlayer2D" parent="Vamp/Guy" unique_id=1649420459]
+position = Vector2(0, 127)
+stream = SubResource("AudioStreamRandomizer_y1ge0")
+
+[node name="Death" type="AudioStreamPlayer2D" parent="Vamp/Guy" unique_id=367972879]
+stream = ExtResource("12_bn160")
 
 [node name="GuySprite" type="AnimatedSprite2D" parent="Vamp" unique_id=1865841157]
 position = Vector2(7, -137)
@@ -406,3 +434,16 @@ offset_top = -45.0
 offset_right = 530.0
 offset_bottom = -22.0
 label_settings = SubResource("LabelSettings_pt1fr")
+
+[node name="Lose" type="AudioStreamPlayer2D" parent="Node2D" unique_id=1937990177]
+position = Vector2(1, -70)
+stream = ExtResource("37_fcu8w")
+
+[node name="Win" type="AudioStreamPlayer2D" parent="." unique_id=11836447]
+process_mode = 3
+stream = ExtResource("30_y0ml6")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1166152628]
+process_mode = 3
+stream = ExtResource("38_cjdc2")
+script = ExtResource("39_fcu8w")

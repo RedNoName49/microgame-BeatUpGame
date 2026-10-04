@@ -31,9 +31,8 @@ func _physics_process(delta: float) -> void:
 func on_hit(_guy):
 	if speed > minimumDamageSpeed:
 		health.takeDamage(damage)
-		print(health.healthPoints)
 	else:
-		print("too slow")
+		pass
 	
 	
 	
